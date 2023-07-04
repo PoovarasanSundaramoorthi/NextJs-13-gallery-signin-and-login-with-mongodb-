@@ -13,8 +13,11 @@ const LoginForm = () => {
     // Perform login logic with email and password
     const requestOptions = {
       method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      // body: JSON.stringify({ title: "React POST Request Example", name: "Poovarasan" }),
+      headers: {
+        "Content-Type": "application/json",
+        Origin: "https://next-js-13-gallery-signin-and-login-with-mongodb.vercel.app",
+        Cors: "true",
+      },      // body: JSON.stringify({ title: "React POST Request Example", name: "Poovarasan" }),
       body: JSON.stringify({ email: email, password: password }),
     };
     fetch("http://localhost:3000/api/login/", requestOptions)

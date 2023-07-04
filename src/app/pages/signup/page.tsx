@@ -17,8 +17,11 @@ const SignInForm = () => {
 
     const requestOptions = {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      // body: JSON.stringify({ title: "React POST Request Example", name: "Poovarasan" }),
+      headers: {
+        "Content-Type": "application/json",
+        Origin: "https://next-js-13-gallery-signin-and-login-with-mongodb.vercel.app",
+        Cors: "false",
+      },      // body: JSON.stringify({ title: "React POST Request Example", name: "Poovarasan" }),
       body: JSON.stringify({ email: email, password: password, userName: userName }),
     };
     fetch("http://localhost:3000/api/login/", requestOptions)
