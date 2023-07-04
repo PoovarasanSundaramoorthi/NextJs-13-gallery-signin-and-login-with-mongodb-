@@ -25,10 +25,14 @@ function Gallery() {
   const [doubleClicked, setDoubleClicked] = useState(false);
   const [query, setQuery] = useState("");
   const [filteredImages, setFilteredImages] = useState(images);
-  const token = localStorage.getItem("token");
+  const [token, setToken] = useState('')
 
-
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      setToken(token)
+    }
+  }, []);
 
   const handleDoubleClick = () => {
     setDoubleClicked(!doubleClicked);
