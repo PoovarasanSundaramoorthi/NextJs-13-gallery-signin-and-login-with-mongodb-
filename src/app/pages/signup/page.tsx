@@ -20,7 +20,7 @@ const SignInForm = () => {
       headers: {
         "Content-Type": "application/json",
         Origin: "https://next-js-13-gallery-signin-and-login-with-mongodb.vercel.app",
-        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Origin': 'http://localhost:3000',
         'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
         'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
         'Access-Control-Allow-Credentials': "true"
