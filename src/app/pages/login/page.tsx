@@ -16,7 +16,10 @@ const LoginForm = () => {
       headers: {
         "Content-Type": "application/json",
         Origin: "https://next-js-13-gallery-signin-and-login-with-mongodb.vercel.app",
-        Cors: "true",
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+        'Access-Control-Allow-Credentials': true
       },      // body: JSON.stringify({ title: "React POST Request Example", name: "Poovarasan" }),
       body: JSON.stringify({ email: email, password: password }),
     };
