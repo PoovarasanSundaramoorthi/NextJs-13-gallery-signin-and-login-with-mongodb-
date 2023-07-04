@@ -19,13 +19,14 @@ async function getData() {
   return res.json();
 }
 
-let token = localStorage.getItem("token");
 
 function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [doubleClicked, setDoubleClicked] = useState(false);
   const [query, setQuery] = useState("");
   const [filteredImages, setFilteredImages] = useState(images);
+  const token = localStorage.getItem("token");
+
 
   useEffect(() => {}, []);
 
